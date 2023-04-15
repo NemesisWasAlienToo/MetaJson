@@ -95,3 +95,6 @@ make
 
 ./MetaJson
 ```
+
+# Support my work here!
+https://www.buymeacoffee.com/NemesisIsAlien
