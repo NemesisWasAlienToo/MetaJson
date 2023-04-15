@@ -83,3 +83,15 @@ key or and index which might not exist, just use __GetOr__ instead of __Get__.
 ## Usage example
 
 The usage example can be found in Sample/Json.cpp
+
+To compile the example, install fmt and ctre libraries mentioned on the top, and the just do:
+
+```sh
+mkdir build && cd build
+cmake ..
+make
+
+# To execute the example do
+
+./MetaJson
+```
