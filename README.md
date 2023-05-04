@@ -70,11 +70,11 @@ Or to access a possibly out of bound index of a list you can do:
 
 ```cpp
 constexpr auto list = Setting.Get<"list">();
-constexpr auto itemInList = list.GetOr<10>();
+constexpr auto itemInList = list.Get<10>();
 
 //or 
 
-constexpr auto itemInList = Setting.GetOr<"list", 5>();
+constexpr auto itemInList = Setting.Get<"list", 5>();
 ```
 
 It is very important to note that any access to a none-existing key or an out of bound index will cause compile time error. If you are accessing a
