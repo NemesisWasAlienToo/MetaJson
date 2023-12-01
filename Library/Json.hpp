@@ -4,7 +4,7 @@
 #include <ctre.hpp>
 #include <cmath>
 #include <type_traits>
-#include <Meta/String.hpp>
+#include <Core/Meta/String.hpp>
 
 namespace Core::Meta
 {
