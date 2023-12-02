@@ -92,17 +92,4 @@ namespace Core::Meta
 
     template <std::size_t N> String(char const (&)[N]) -> String<N - 1>;
     template <std::size_t N> String(String<N>) -> String<N>;
-
-    template <String TF, String TS>
-    constexpr auto IsEqual()
-    {
-        if (TF.Length() != TS.Length())
-            return false;
-
-        for (std::size_t i = 0; i < TF.Length(); i++)
-            if (TF[i] != TS[i])
-                return false;
-
-        return true;
-    }
 }
