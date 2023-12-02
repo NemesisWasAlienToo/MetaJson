@@ -4,7 +4,6 @@ project(CoreMetaJson VERSION 0.1.1 LANGUAGES CXX)
 
 set(LIBRARY_TARGET Json)
 set(LIBRARY_NAMESPACE Core::Meta::)
-set(HEADER_PATH Core/Meta)
 
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
@@ -48,4 +47,4 @@ install(
     "${PROJECT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
     DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/${PROJECT_NAME})
 
-install(DIRECTORY Library/ DESTINATION include/${HEADER_PATH})
+install(DIRECTORY Library/Core DESTINATION include)
