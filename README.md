@@ -1,4 +1,6 @@
-# Compile time json for C++ (V1)
+# Compile time json for C++ (V0.1.1)
+
+This library is a sub part of CoreKit library.
 
 ## Dependencies
 
@@ -80,6 +82,28 @@ constexpr auto itemInList = Setting.Get<"list", 5>();
 It is very important to note that any access to a none-existing key or an out of bound index will cause compile time error. If you are accessing a
 key or and index which might not exist, just use __GetOr__ instead of __Get__.
 
+## Installation
+
+To install the library you can just run the following commands:
+
+```sh
+mkdir build && cd build
+cmake ..
+sudo make install
+```
+
+## Usage
+
+This library is a sub part of CoreKit library. The Cmake package is basically the namespace names following each other in pascal case: CoreMetaJson The target is the namespace names with :: between them: Core::Meta::Json
+
+This is how you can link against this library in your cmake file:
+
+```cmake
+find_package(CoreMetaJson)
+
+target_link_libraries(YOUR_TARGET Core::Meta::Json)
+```
+
 ## Usage example
 
 The usage example can be found in Sample/Json.cpp
@@ -88,7 +112,7 @@ To compile the example, install fmt and ctre libraries mentioned on the top, and
 
 ```sh
 mkdir build && cd build
-cmake ..
+cmake ../Sample
 make
 
 # To execute the example do
