@@ -171,15 +171,15 @@ namespace Core::Meta
     template <Core::Meta::String TValue>
     constexpr auto BaseValue()
     {
-        if constexpr (Core::Meta::IsEqual<TValue, "null">())
+        if constexpr (TValue == "null")
         {
             return nullptr;
         }
-        else if constexpr (Core::Meta::IsEqual<TValue, "true">())
+        else if constexpr (TValue == "true")
         {
             return true;
         }
-        else if constexpr (Core::Meta::IsEqual<TValue, "false">())
+        else if constexpr (TValue == "false")
         {
             return false;
         }
@@ -479,7 +479,7 @@ namespace Core::Meta
         {
             static_assert(!TKey.HasIndex);
 
-            if constexpr (Core::Meta::IsEqual<TKey.GetKey(), Head::Key>())
+            if constexpr (TKey.GetKey() == Head::Key)
                 if constexpr (sizeof...(TRest))
                     return Head::Value.template Get<TRest...>();
                 else
@@ -493,7 +493,7 @@ namespace Core::Meta
         {
             static_assert(!TKey.HasIndex);
 
-            if constexpr (Core::Meta::IsEqual<TKey.GetKey(), Head::Key>())
+            if constexpr (TKey.GetKey() == Head::Key)
                 if constexpr (sizeof...(TRest))
                     return Head::Value.template GetOr<TRest...>(std::move(Default));
                 else
