@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(CoreMetaJson VERSION 0.1.1 LANGUAGES CXX)
+project(Core.Meta.Json VERSION 0.1.1 LANGUAGES CXX)
 
 set(LIBRARY_TARGET Json)
 set(LIBRARY_NAMESPACE Core::Meta::)

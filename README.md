@@ -94,12 +94,12 @@ sudo make install
 
 ## Usage
 
-This library is a sub part of CoreKit library. The Cmake package is basically the namespace names following each other in pascal case: CoreMetaJson The target is the namespace names with :: between them: Core::Meta::Json
+This library is a sub part of CoreKit library. The Cmake package is basically the namespace names following each other in pascal case with dots between them instead of '::' : Core.Meta.Json The target is the namespace names with :: between them: Core::Meta::Json
 
 This is how you can link against this library in your cmake file:
 
 ```cmake
-find_package(CoreMetaJson)
+find_package(Core.Meta.Json)
 
 target_link_libraries(YOUR_TARGET Core::Meta::Json)
 ```

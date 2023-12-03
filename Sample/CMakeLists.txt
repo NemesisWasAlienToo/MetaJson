@@ -11,7 +11,7 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 find_package(fmt REQUIRED)
 
 if(UseInstalled)
-    find_package(CoreMetaJson REQUIRED)
+    find_package(Core.Meta.Json REQUIRED)
     target_link_libraries(${PROJECT_NAME} fmt::fmt Core::Meta::Json)
     message("Using the installed version of the library")
 else()
